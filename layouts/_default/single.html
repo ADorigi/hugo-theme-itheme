@@ -60,6 +60,11 @@
             {{ $content = $content | replaceRE "</ul>" "</ul></div>" }}
             {{ $content |  safeHTML}}
           </div>
+          <div class="component">
+            <div class="component-content">
+          {{ partial "giscus.html" . }}
+        </div>
+    </div>
           {{- if and $notPlainPage site.Params.ShowCopyRight -}}
           <div class="component">
             <div class="component-content">
